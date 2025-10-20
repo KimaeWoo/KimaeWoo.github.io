@@ -1,0 +1,713 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>김태우 포트폴리오</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="10fdf187-7ec3-8098-8db4-d7f95ad67a18" class="page sans"><header><h1 class="page-title">김태우 포트폴리오</h1><p class="page-description"></p></header><div class="page-body"><h1 id="28ddf187-7ec3-80c1-85cc-db195c599d27" class="">Profile</h1><hr id="28ddf187-7ec3-80f8-9623-c7d5d582021f"/><div id="292df187-7ec3-80d6-bc99-d70c49615cfc" class="column-list"><div id="292df187-7ec3-80d2-880a-ff2a90948f39" style="width:25%" class="column"><figure id="28ddf187-7ec3-803d-a89e-f261ce6a9e5d" class="image"><a href="%EA%B9%80%ED%83%9C%EC%9A%B0%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%2010fdf1877ec380988db4d7f95ad67a18/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EC%82%AC%EC%A7%84.png"><img style="width:240px" src="%EA%B9%80%ED%83%9C%EC%9A%B0%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%2010fdf1877ec380988db4d7f95ad67a18/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EC%82%AC%EC%A7%84.png"/></a></figure></div><div id="292df187-7ec3-802b-bd1d-edc0f19c4c31" style="width:75%" class="column"><ul id="292df187-7ec3-8092-a487-cdfb78e3dbbf" class="bulleted-list"><li style="list-style-type:disc">✉️ bighelp128@gmail.com</li></ul><ul id="292df187-7ec3-807c-8d70-eaf03103fbde" class="bulleted-list"><li style="list-style-type:disc">📱 010-4193-9227</li></ul><ul id="292df187-7ec3-80fe-90d0-d3f4b6438697" class="bulleted-list"><li style="list-style-type:disc"><img alt="github_logo_icon_229278" src="%EA%B9%80%ED%83%9C%EC%9A%B0%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%2010fdf1877ec380988db4d7f95ad67a18/github_logo_icon_229278.png" style="width:1em;height:1em"/> <a href="https://github.com/KimaeWoo">https://github.com/KimaeWoo</a></li></ul><p id="292df187-7ec3-80c0-b540-f9924e241c41" class="">
+</p><p id="292df187-7ec3-8073-88c0-f160ce67b2ae" class="">한라대학교 컴퓨터공학 <mark class="highlight-default">(졸업예정)</mark><br/><mark class="highlight-gray">2020.03 - 2026.02</mark></p></div></div><h3 id="28ddf187-7ec3-80c9-a452-d5c0d29871ab" class="">안녕하세요, 문제 해결 중심의 개발자 김태우입니다.</h3><p id="28ddf187-7ec3-80d3-aa71-deda0e3f1ec5" class="">프로젝트에서 백엔드 구조를 설계하고 효율적인 데이터 흐름을 만드는 과정에 흥미를 느끼며, 새로운 기술을 빠르게 익히고, 팀원과 함께 실질적인 개선을 이뤄내는 걸 좋아합니다.</p><p id="292df187-7ec3-80c8-b017-d04f64800723" class="">
+</p><hr id="292df187-7ec3-8026-b3d1-d2b2032ed17f"/><div id="28ddf187-7ec3-8044-ae89-db18318222c9" class="column-list"><div id="28ddf187-7ec3-803c-803a-c22b72b6c2d6" style="width:50%" class="column"><h3 id="28ddf187-7ec3-809c-b46f-fbf0cf539299" class="">자격증</h3><ul id="28ddf187-7ec3-801e-b850-f670bc371f8d" class="bulleted-list"><li style="list-style-type:disc">정보처리기사<ul id="292df187-7ec3-80f8-a220-f11640aa7733" class="bulleted-list"><li style="list-style-type:circle">2025.09.12</li></ul></li></ul><ul id="28ddf187-7ec3-80d8-9fbf-ed347a232ea2" class="bulleted-list"><li style="list-style-type:disc">TOPCIT 수준3 <ul id="292df187-7ec3-8099-87d8-dfcca2664bca" class="bulleted-list"><li style="list-style-type:circle">2025.05.24</li></ul></li></ul><ul id="28ddf187-7ec3-8084-83f8-d3079ff6c31a" class="bulleted-list"><li style="list-style-type:disc">AWS Certified Cloud Practitioner <ul id="292df187-7ec3-801c-a209-d689458391b7" class="bulleted-list"><li style="list-style-type:circle">2024.08.06</li></ul></li></ul></div><div id="28ddf187-7ec3-8052-8c09-ed6afdae2e6a" style="width:50%" class="column"><h3 id="28ddf187-7ec3-8012-bc4c-ea4cfbeb5cd8" class="">수상경력</h3><ul id="292df187-7ec3-802d-9850-c58ec8911ed6" class="bulleted-list"><li style="list-style-type:disc">2025 HL Future Day Track 3 우수상<ul id="292df187-7ec3-8018-a79c-d9421d5a65b9" class="bulleted-list"><li style="list-style-type:circle">2025.06.20 ~ 2025.11.06 (시상 예정)</li></ul><ul id="292df187-7ec3-8019-8ad1-f33b5edc276e" class="bulleted-list"><li style="list-style-type:circle">MQTT 기반 스마트팜 클라우드 통합 관리 시스템 아이디어 제안</li></ul></li></ul><ul id="28ddf187-7ec3-8035-a2dc-cda458d4c699" class="bulleted-list"><li style="list-style-type:disc">2025 글로벌 디지털 인재양성 페스타 장려상<ul id="292df187-7ec3-8038-bb2a-ed9772d91fc3" class="bulleted-list"><li style="list-style-type:circle">2025.09.11 ~ 2025.09.12</li></ul><ul id="292df187-7ec3-80d9-8260-d5a237ec5789" class="bulleted-list"><li style="list-style-type:circle">스마트팜 프로젝트에 대한 시연 및 발표</li></ul></li></ul><ul id="28ddf187-7ec3-80d3-8c3f-f39f9f9400aa" class="bulleted-list"><li style="list-style-type:disc">2025 강원 SW중심대학 성과발표회 우수상<ul id="292df187-7ec3-8083-a1be-f63023d15e97" class="bulleted-list"><li style="list-style-type:circle">2025.08.27</li></ul><ul id="292df187-7ec3-8003-8709-ec7390c285d8" class="bulleted-list"><li style="list-style-type:circle">스마트팜 작품 전시 및 시연</li></ul></li></ul><ul id="28ddf187-7ec3-8082-8186-f1405e3d8c95" class="bulleted-list"><li style="list-style-type:disc">공공데이터 분석 경진대회 우수상<ul id="292df187-7ec3-8030-a1c2-f19669296ac0" class="bulleted-list"><li style="list-style-type:circle">2024.12.05 ~ 2024.12.06</li></ul><ul id="292df187-7ec3-8093-90d8-f6ba5a164d14" class="bulleted-list"><li style="list-style-type:circle">건강보험심사평가원에서 제공한 의료 데이터 분석 및 결과 발표</li></ul></li></ul></div></div><h1 id="10fdf187-7ec3-814e-a024-f62970478e16" class="block-color-blue"><mark class="highlight-default">활동</mark></h1><hr id="28ddf187-7ec3-8004-b9d5-d21fed5a57be"/><ul id="28ddf187-7ec3-80ae-99f8-d985377ae04f" class="bulleted-list"><li style="list-style-type:disc">부스트캠프 웹·모바일 10기 챌린지 <mark class="highlight-gray">2025.06.23 ~ 2025.08.08</mark></li></ul><ul id="28ddf187-7ec3-8086-a0ed-ec7eb19f5ac1" class="bulleted-list"><li style="list-style-type:disc">클라우드컴퓨팅 부트캠프 <mark class="highlight-gray">2024.12.02 ~ 2024.12.03</mark></li></ul><ul id="28ddf187-7ec3-80f2-833c-ef925bdbd621" class="bulleted-list"><li style="list-style-type:disc">게임 개발 동아리 <mark class="highlight-gray">2023.06 ~ 2023.11</mark></li></ul><p id="292df187-7ec3-802d-86bd-f2ffa57956ae" class="">
+</p><h1 id="10fdf187-7ec3-8144-b981-ffcdc89fdec7" class="block-color-blue"><mark class="highlight-default">프로젝트</mark></h1><hr id="10fdf187-7ec3-81df-8156-ce71356480c4"/><div id="10fdf187-7ec3-819d-b3a7-cec37a3b678d" class="collection-content"><h4 class="collection-title">프로젝트 </h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><img src="https://www.notion.so/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>Name</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>작업기간</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>프로젝트 설명</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/burst_gray.svg" style="width:14px;height:14px;display:block"/></span>프로젝트 유형</th><th><span class="icon property-icon"><img src="https://www.notion.so/icons/link_gray.svg" style="width:14px;height:14px;display:block"/></span>🔗 GitHub Repository</th></tr></thead><tbody><tr id="292df187-7ec3-8098-a3b5-d53cc0148e46"><td class="cell-title"><a href="%EA%B9%80%ED%83%9C%EC%9A%B0%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%2010fdf1877ec380988db4d7f95ad67a18/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%2010fdf1877ec3819db3a7cec37a3b678d/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8C%9C%20%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20292df1877ec38098a3b5d53cc0148e46.html">스마트팜 모니터링 시스템</a></td><td class="cell-`Bst"><time>@2024년 10월 1일 → 2025년 6월 5일</time></td><td class="cell-Ugkx">IoT 센서와 AI 분석을 활용한 스마트 농장 관리 시스템</td><td class="cell-o}`:"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Team</span></td><td class="cell-HgA~"><a href="https://github.com/KimaeWoo/smartFarm" class="url-value">https://github.com/KimaeWoo/smartFarm</a></td></tr><tr id="10fdf187-7ec3-814c-b6eb-d5e2377b6e1c"><td class="cell-title"><a href="%EA%B9%80%ED%83%9C%EC%9A%B0%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%2010fdf1877ec380988db4d7f95ad67a18/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%2010fdf1877ec3819db3a7cec37a3b678d/Travel%20Diary%2010fdf1877ec3814cb6ebd5e2377b6e1c.html"><span class="icon">🧳</span>Travel Diary</a></td><td class="cell-`Bst"><time>@2024년 10월 1일 → 2024년 11월 30일</time></td><td class="cell-Ugkx">나만의 여행 기록 앱</td><td class="cell-o}`:"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Team</span></td><td class="cell-HgA~"><a href="https://github.com/KimaeWoo/TravelDiary" class="url-value">https://github.com/KimaeWoo/TravelDiary</a></td></tr><tr id="10fdf187-7ec3-8164-a86d-fa8cfc9a939a"><td class="cell-title"><a href="%EA%B9%80%ED%83%9C%EC%9A%B0%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%2010fdf1877ec380988db4d7f95ad67a18/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%2010fdf1877ec3819db3a7cec37a3b678d/To%20Yourism%2010fdf1877ec38164a86dfa8cfc9a939a.html"><span class="icon">🏖️</span>To Yourism</a></td><td class="cell-`Bst"><time>@2024년 6월 1일 → 2024년 8월 31일</time></td><td class="cell-Ugkx">지역별 관광 정보 및 여행 커뮤니티 앱 </td><td class="cell-o}`:"><span class="status-value select-value-color-blue"><div class="status-dot status-dot-color-blue"></div>Personal</span></td><td class="cell-HgA~"><a href="https://github.com/KimaeWoo/To_Yourism" class="url-value">https://github.com/KimaeWoo/To_Yourism</a></td></tr></tbody></table><br/><br/></div><p id="10fdf187-7ec3-8140-90a9-e38f21e3bc8a" class="">
+</p><p id="10fdf187-7ec3-8175-b2de-d833c7026db7" class="">
+</p><p id="10fdf187-7ec3-81f4-9e31-d76e9c3d63f0" class="">
+</p><p id="10fdf187-7ec3-81b1-ad66-e5eada9f257a" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
